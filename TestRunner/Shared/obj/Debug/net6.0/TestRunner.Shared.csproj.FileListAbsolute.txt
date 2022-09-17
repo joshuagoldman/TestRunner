@@ -1,0 +1,12 @@
+C:\Users\USER\Documents\TestRunner\TestRunner\Shared\bin\Debug\net6.0\TestRunner.Shared.deps.json
+C:\Users\USER\Documents\TestRunner\TestRunner\Shared\bin\Debug\net6.0\TestRunner.Shared.dll
+C:\Users\USER\Documents\TestRunner\TestRunner\Shared\bin\Debug\net6.0\TestRunner.Shared.pdb
+C:\Users\USER\Documents\TestRunner\TestRunner\Shared\obj\Debug\net6.0\TestRunner.Shared.csproj.AssemblyReference.cache
+C:\Users\USER\Documents\TestRunner\TestRunner\Shared\obj\Debug\net6.0\TestRunner.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Documents\TestRunner\TestRunner\Shared\obj\Debug\net6.0\TestRunner.Shared.AssemblyInfoInputs.cache
+C:\Users\USER\Documents\TestRunner\TestRunner\Shared\obj\Debug\net6.0\TestRunner.Shared.AssemblyInfo.cs
+C:\Users\USER\Documents\TestRunner\TestRunner\Shared\obj\Debug\net6.0\TestRunner.Shared.csproj.CoreCompileInputs.cache
+C:\Users\USER\Documents\TestRunner\TestRunner\Shared\obj\Debug\net6.0\TestRunner.Shared.dll
+C:\Users\USER\Documents\TestRunner\TestRunner\Shared\obj\Debug\net6.0\refint\TestRunner.Shared.dll
+C:\Users\USER\Documents\TestRunner\TestRunner\Shared\obj\Debug\net6.0\TestRunner.Shared.pdb
+C:\Users\USER\Documents\TestRunner\TestRunner\Shared\obj\Debug\net6.0\ref\TestRunner.Shared.dll

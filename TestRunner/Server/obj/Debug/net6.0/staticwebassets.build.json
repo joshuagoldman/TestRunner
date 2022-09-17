@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "RdP/w2It1pNSJp53sPzbBNZl475XoMNuNV/gLZCW/rc=",
+  "Source": "TestRunner.Server",
+  "BasePath": "_content/TestRunner.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

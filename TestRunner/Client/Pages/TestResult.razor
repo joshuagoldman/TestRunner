@@ -1,0 +1,23 @@
+﻿
+
+@code {
+    @code {
+        [Parameter]
+        public bool ShowDialog { get; set; } = true;
+
+        [Parameter]
+        public string Result { get; set; } = "";
+
+        public EventCallback<bool> DialogStatusChanged { get; set; }
+
+        protected override Task OnInitializedAsync()
+        {
+            return base.OnInitializedAsync();
+        }
+
+        public void OnClose()
+        {
+            ShowDialog = false;
+        }
+    }
+}

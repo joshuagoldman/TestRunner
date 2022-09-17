@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "O+3b1FuaVrB+2UcVKevb8mzPreWTtC9yGfxOKhXavKjrVBUtcllXjo3wjaLRsVT+A6Gvd9dmmxNJCHhQIH4kWQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\USER\\Documents\\TestRunner\\TestRunner.Library\\TestRunner.Library.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

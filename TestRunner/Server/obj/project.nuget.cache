@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "d9x/uXu8kWmildscRC6/bLo4rffSw2yPQL0Aj7xGzqs3Fot1kXYsjLtewyt68jCGBglMLSSkyFwPvORK/JKSdQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\USER\\Documents\\TestRunner\\TestRunner\\Server\\TestRunner.Server.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.server\\6.0.8\\microsoft.aspnetcore.components.webassembly.server.6.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

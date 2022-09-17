@@ -1,0 +1,112 @@
+﻿@page "/"
+
+@inject Library.IGetSeveralByTestTypeFactory<Library.ITestRunInfo> testCasesFactory
+
+<PageTitle>Test Runner</PageTitle>
+
+
+@if (ShowResult)
+{
+    <div class="modal fade show" id="myModal" style="display:block; background-color: rgba(10,10,10,.8);"
+     aria-modal="true" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">This is the title</h4>
+                    <button @onclick="OnClose" type="button" class="close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>@CurrentResult</p>
+                </div>
+                <div class="modal-footer">
+                    <button @onclick="OnClose" type="button" class="btn btn-primary">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else{
+    @foreach (var testRunInfosByTestType in TestRunInfos)
+    {
+        <button class="btn-dark" style="align-content:center ; padding:10px ; margin:10px" @onclick="async () => await RunAll()">Run All</button>
+        <table class="table table-sm table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Test Name</th>
+                    <th scope="col">Result</th>
+                    <th scope="col">Info</th>
+                </tr>
+            </thead>
+            @foreach (var testRunInfo in testRunInfosByTestType)
+            {
+                <tbody>
+                    <tr>
+                        <td>
+                            <button @onclick="async () => await OnRunTestButtonClicked(testRunInfo)">@testRunInfo.TestName</button>
+                        </td>
+                        <td style="background-color:@testRunInfo.Color">@testRunInfo.State</td>
+                        <td>
+                            <button @onclick="() => OnShowTestResult(testRunInfo)" disabled="@(!testRunInfo.Result2ShowExists)">@testRunInfo.TestName</button>
+                        </td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    }
+}
+
+
+@code {
+    [Parameter]
+    public List<List<Library.ITestRunInfo>> TestRunInfos { get; set; } = new List<List<Library.ITestRunInfo>>();
+
+    public bool ShowResult { get; set; } = false;
+    public string CurrentResult { get; set; } = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        foreach (var tType in System.Enum.GetValues<Library.TestType>())
+        {
+            var testRunInfoByTestType = new List<Library.ITestRunInfo>();
+            foreach (var item in testCasesFactory.GetByTestType(tType))
+            {
+                item.PropertyChanged += (propchangedArgs =>
+                {
+                    propchangedArgs.PropInfo.SetValue(item, propchangedArgs.PropValue);
+                });
+                testRunInfoByTestType.Add(item);
+            }
+
+            TestRunInfos.Add(testRunInfoByTestType);
+        }
+
+        await base.OnInitializedAsync();
+    }
+
+    public void OnClose()
+    {
+        ShowResult = false;
+    }
+
+    private void OnShowTestResult(Library.ITestRunInfo testRunInfo)
+    {
+        CurrentResult = testRunInfo.Result2Show;
+        ShowResult = true;
+    }
+
+    private async Task OnRunTestButtonClicked(Library.ITestRunInfo testRunInfo)
+    {
+        await testRunInfo.TestRunMethodInfo.Invoke();
+
+    }
+
+    private async Task RunAll()
+    {
+        var taskList = new List<Task>();
+        foreach (var testRunInfo in TestRunInfos.SelectMany(x => x))
+        {
+            taskList.Add(testRunInfo.TestRunMethodInfo.Invoke());
+        }
+        await Task.WhenAll(taskList);
+    }
+}

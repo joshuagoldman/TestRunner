@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "TestRunner.Server/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.WebAssembly.Server": "6.0.8"
+        },
+        "runtime": {
+          "TestRunner.Server.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Components.WebAssembly.Server/6.0.8": {
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Components.WebAssembly.Server.dll": {
+            "assemblyVersion": "6.0.8.0",
+            "fileVersion": "6.0.822.36316"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TestRunner.Server/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Components.WebAssembly.Server/6.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iXDGkOa/lxkniqAzYXFK5AjD2xeTWvQ+9bmJHNDL3aj+e9hUpboH9gwBwy0Z4YPdsNF4MZVGfTQnZx7Vi/AH8g==",
+      "path": "microsoft.aspnetcore.components.webassembly.server/6.0.8",
+      "hashPath": "microsoft.aspnetcore.components.webassembly.server.6.0.8.nupkg.sha512"
+    }
+  }
+}
